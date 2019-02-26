@@ -11,27 +11,30 @@ namespace randomQ5.CS
 		static void Main(string[] args)
 		{
 			int guess;
-			Random engine = new Random();
-			int secert = engine.Next(100) + 1;
-			int counter = 1;
-			guess = Convert.ToInt32(Console.ReadLine());
-			while (secert != guess)
-			{
-				counter++;
-				if (guess < secert)
-				{
-					Console.WriteLine("too small");
-				}
-				else
-				{
-					Console.WriteLine("too big");
-				}
+				Random engine = new Random();
+				int secert = engine.Next(100) + 1;
+				int counter = 1;
 				guess = Convert.ToInt32(Console.ReadLine());
-			}
+				while (secert != guess)
+				{
+					counter++;  
+					if (guess < secert)
+					{
+						Console.WriteLine("too small");
+					}
+					else
+					{
+						Console.WriteLine("too big");
+					}
 
-			Console.WriteLine("bingo");
-
+					guess = Convert.ToInt32(Console.ReadLine());
+				}
+				\\ print how many guess
+			Console.WriteLine($"Bingo!!! it took you only {counter}");
 		}
+		
 	}
+
 }
+	
 		
